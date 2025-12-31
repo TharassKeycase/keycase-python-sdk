@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "keycase-agent-sdk"
-version = "0.1.0b1"
+version = "0.1.0b2"
 description = "Python SDK for Keycase Agent execution and keyword integration"
 readme = "README.md"
 license = {text = "MIT"}
