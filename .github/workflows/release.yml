@@ -107,23 +107,20 @@ jobs:
           repository-url: https://test.pypi.org/legacy/
           password: ${{ secrets.TEST_PYPI_API_TOKEN }}
 
-  # Optional: Publish to PyPI (uncomment when ready)
-  # pypi-publish:
-  #   name: Publish to PyPI
-  #   needs: [build, testpypi-publish]
-  #   runs-on: ubuntu-latest
-  #   environment:
-  #     name: pypi
-  #     url: https://pypi.org/p/keycase-agent-sdk
-  #   permissions:
-  #     id-token: write
-  #
-  #   steps:
-  #     - name: Download artifacts
-  #       uses: actions/download-artifact@v4
-  #       with:
-  #         name: dist
-  #         path: dist/
-  #
-  #     - name: Publish to PyPI
-  #       uses: pypa/gh-action-pypi-publish@release/v1
+  # Publish to PyPI (production)
+  pypi-publish:
+    name: Publish to PyPI
+    needs: [build, testpypi-publish]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
