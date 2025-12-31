@@ -1,0 +1,38 @@
+{
+  "project_id": "local",
+  "run_id": 34,
+  "result": {
+    "startDateTime": "2025-08-16T11:05:28.366248+00:00",
+    "runId": 34,
+    "endDateTime": "2025-08-16T11:05:28.369949+00:00",
+    "flowResults": [
+      {
+        "id": 16,
+        "failedOnStepId": null,
+        "status": "PASSED",
+        "message": null,
+        "runAt": "2025-08-16T11:05:28.366283+00:00",
+        "completedAt": "2025-08-16T11:05:28.368077+00:00",
+        "name": "calc_sum1"
+      },
+      {
+        "id": 17,
+        "failedOnStepId": null,
+        "status": "PASSED",
+        "message": null,
+        "runAt": "2025-08-16T11:05:28.368096+00:00",
+        "completedAt": "2025-08-16T11:05:28.368813+00:00",
+        "name": "calc_validaiton"
+      },
+      {
+        "id": 18,
+        "failedOnStepId": null,
+        "status": "PASSED",
+        "message": null,
+        "runAt": "2025-08-16T11:05:28.368845+00:00",
+        "completedAt": "2025-08-16T11:05:28.369926+00:00",
+        "name": "eenVetteJah"
+      }
+    ]
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "name": "Sample Execution Plan", 
+  "runId": 34,
+  "keywordInstances": [
+    {
+      "id": 11,
+      "name": "sum_1",
+      "keywordName": "calculator_postman",
+      "keywordId": 8,
+      "params": [
+        {
+          "id": 24,
+          "name": "num1",
+          "direction": "INPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": "1"
+        },
+        {
+          "id": 25,
+          "name": "num2",
+          "direction": "INPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": "2"
+        },
+        {
+          "id": 26,
+          "name": "expected_sum",
+          "direction": "INPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": "3"
+        },
+        {
+          "id": 28,
+          "name": "return_sum",
+          "direction": "OUTPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "DirEnzo",
+      "keywordName": "JansenEnPiet",
+      "keywordId": 6,
+      "params": [
+        {
+          "id": 18,
+          "name": "p2",
+          "direction": "INPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": "jansen"
+        },
+        {
+          "id": 19,
+          "name": "p1",
+          "direction": "INPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": "piet"
+        },
+        {
+          "id": 20,
+          "name": "output_1",
+          "direction": "OUTPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "hoera",
+      "keywordName": "NewMan",
+      "keywordId": 7,
+      "params": [
+        {
+          "id": 23,
+          "name": "output_1",
+          "direction": "OUTPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": ""
+        },
+        {
+          "id": 21,
+          "name": "p2",
+          "direction": "INPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": "data2"
+        },
+        {
+          "id": 22,
+          "name": "p1",
+          "direction": "INPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": "data3"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "jansen en piet",
+      "keywordName": "calc_validation",
+      "keywordId": 9,
+      "params": [
+        {
+          "id": 27,
+          "name": "incoming_sum",
+          "direction": "INPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": "{{waarde}}"
+        },
+        {
+          "id": 29,
+          "name": "validation",
+          "direction": "INPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "ghfg",
+      "keywordName": "WieIshetBroer",
+      "keywordId": 5,
+      "params": [
+        {
+          "id": 14,
+          "name": "4545",
+          "direction": "INPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": "fff het gaat goed broer haha"
+        },
+        {
+          "id": 16,
+          "name": "dirk",
+          "direction": "OUTPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": ""
+        },
+        {
+          "id": 17,
+          "name": "2255",
+          "direction": "INPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "5484",
+      "keywordName": "WieIshetBroer",
+      "keywordId": 5,
+      "params": [
+        {
+          "id": 14,
+          "name": "4545",
+          "direction": "INPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": "88"
+        },
+        {
+          "id": 16,
+          "name": "dirk",
+          "direction": "OUTPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": ""
+        },
+        {
+          "id": 17,
+          "name": "2255",
+          "direction": "INPUT",
+          "type": "TEXT",
+          "isMandatory": false,
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "id": 16,
+      "flowId": 19,
+      "sequenceOrder": 1,
+      "runMode": "default",
+      "name": "calc_sum1",
+      "description": "This is een mooie of niet ",
+      "steps": [
+        {
+          "id": 224,
+          "instanceId": 11,
+          "sequenceOrder": 0
+        },
+        {
+          "id": 225,
+          "instanceId": 9,
+          "sequenceOrder": 1
+        },
+        {
+          "id": 226,
+          "instanceId": 10,
+          "sequenceOrder": 2
+        }
+      ],
+      "connections": [
+        {
+          "id": 34,
+          "fromStepId": 225,
+          "toStepId": 226,
+          "fromParamId": 20,
+          "toParamId": 21
+        },
+        {
+          "id": 35,
+          "fromStepId": 224,
+          "toStepId": 226,
+          "fromParamId": 28,
+          "toParamId": 22
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "flowId": 20,
+      "sequenceOrder": 2,
+      "runMode": "default",
+      "name": "calc_validaiton",
+      "description": "",
+      "steps": [
+        {
+          "id": 208,
+          "instanceId": 11,
+          "sequenceOrder": 0
+        },
+        {
+          "id": 209,
+          "instanceId": 12,
+          "sequenceOrder": 1
+        }
+      ],
+      "connections": [
+        {
+          "id": 27,
+          "fromStepId": 208,
+          "toStepId": 209,
+          "fromParamId": 28,
+          "toParamId": 27
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "flowId": 18,
+      "sequenceOrder": 3,
+      "runMode": "default",
+      "name": "eenVetteJah",
+      "description": "",
+      "steps": [
+        {
+          "id": 197,
+          "instanceId": 8,
+          "sequenceOrder": 0
+        },
+        {
+          "id": 198,
+          "instanceId": 10,
+          "sequenceOrder": 1
+        },
+        {
+          "id": 199,
+          "instanceId": 7,
+          "sequenceOrder": 2
+        }
+      ],
+      "connections": [
+        {
+          "id": 25,
+          "fromStepId": 197,
+          "toStepId": 198,
+          "fromParamId": 16,
+          "toParamId": 21
+        }
+      ]
+    }
+  ]
+}
