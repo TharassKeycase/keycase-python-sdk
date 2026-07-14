@@ -315,7 +315,7 @@ class KeycaseAgent:
     def _update_status(self, busy: bool) -> None:
         """Update agent status (busy/idle)."""
         status = self.state_tracker.set_busy(busy)
-        status_update("AGENT_STATUS_NOTIFY", status)
+        status_update(WebSocketEventType.AGENT_STATUS_NOTIFY, status)
 
     def _get_execution_plan(self, project_id: int, run_id: int) -> str:
         """Fetch execution plan from server.

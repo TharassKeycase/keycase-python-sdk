@@ -10,6 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Nothing yet
 
+## [0.1.0b3] - 2026-07-14
+
+### Fixed
+- `_update_status` sent the raw string `"AGENT_STATUS_NOTIFY"` instead of the
+  `WebSocketEventType.AGENT_STATUS_NOTIFY` enum member, so the event name was
+  transmitted uppercase and unrecognized by the server (logged as `Unknown
+  event received`). Agent busy/available status updates were silently
+  dropped as a result.
+
 ## [0.1.0b1] - 2024-12-10
 
 ### Added
@@ -31,5 +40,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Parameter types (number, integer, boolean, object, array) are accepted but treated as strings
 - Full type validation planned for Phase 2 (see ROADMAP.md)
 
-[Unreleased]: https://github.com/TharassKeycase/keycase-python-sdk/compare/v0.1.0b1...HEAD
+[Unreleased]: https://github.com/TharassKeycase/keycase-python-sdk/compare/v0.1.0b3...HEAD
+[0.1.0b3]: https://github.com/TharassKeycase/keycase-python-sdk/compare/v0.1.0b2...v0.1.0b3
 [0.1.0b1]: https://github.com/TharassKeycase/keycase-python-sdk/releases/tag/v0.1.0b1
